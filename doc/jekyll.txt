@@ -1,0 +1,53 @@
+*jekyll.txt* Blogging from the command line should not be tedious.
+
+Author: Denis Evsyukov <denis@evsyukov.org>
+
+==============================================================================
+INTRODUCTION                                    *jekyll*
+
+This script is intended to automate the process of creating and editing
+Jekyll (http://jekyllrb.com/) blog posts from within vim.
+
+This is complete rewrite of parkr/vim-jekyll
+(https://github.com/parkr/vim-jekyll) 
+
+==============================================================================
+CONFIGURATION                                   *jekyll-configuration*
+
+There are a few global variables that can be set to adjust the way vim handles
+Jekyll blogs. Default values for each are listed below unless noted.
+
+                                                *g:jekyll_post_dirs*  >
+    let g:jekyll_post_dirs = ['_posts', '_source/_posts']
+A |List| containing paths to search to identify a Jekyll blog's posts
+directory. For most Jekyll blogs, this will be `_posts`. Octopress posts are
+kept in `_source/_posts`.
+
+                                                *g:jekyll_post_extension*  >
+    let g:jekyll_post_extension = '.markdown'
+The extension used when creating new posts.
+
+						*g:jekyll_path  >
+    let g:jekyll_path = "~/path/blog"
+The path where the blog is placed on your hard disk
+ 
+==============================================================================
+COMMANDS                                        *jekyll-commands*
+
+The |:JekyllPost| (Jekyll post) command is used to create blog posts. 
+
+                                                *jekyll-:Jpost*
+:JekyllPost[!]  [{name}] Create or edit the specified post. With no argument, you
+                    will be prompted to select a post or enter a title.
+
+==============================================================================
+ABOUT                                           *jekyll-about*
+
+Grab the latest version or report a bug on Github:
+
+https://github.com/Juev/vim-jekyll/
+
+                                                *jekyll-license*
+Distributed under the same terms as Vim itself. See |license|.
+
+ vim:tw=78:et:ft=help:norl:
